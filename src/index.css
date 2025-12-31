@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Warm, compassionate color palette inspired by cherry blossoms and sunset */
+    --background: 20 50% 97%;
+    --foreground: 350 30% 25%;
+
+    --card: 20 40% 98%;
+    --card-foreground: 350 30% 25%;
+
+    --popover: 20 40% 98%;
+    --popover-foreground: 350 30% 25%;
+
+    /* Dusty rose primary */
+    --primary: 350 45% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft cream secondary */
+    --secondary: 30 50% 94%;
+    --secondary-foreground: 350 30% 30%;
+
+    --muted: 20 30% 92%;
+    --muted-foreground: 350 20% 45%;
+
+    /* Warm peach accent */
+    --accent: 15 60% 75%;
+    --accent-foreground: 350 40% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 25% 88%;
+    --input: 20 25% 88%;
+    --ring: 350 45% 55%;
+
+    --radius: 1rem;
+
+    /* Custom colors for the legacy theme */
+    --gold: 38 70% 60%;
+    --gold-light: 38 60% 85%;
+    --rose-muted: 350 35% 70%;
+    --blush: 15 50% 90%;
+    --cream: 40 40% 96%;
+    --warm-gray: 20 10% 50%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(350 45% 55%), hsl(15 60% 70%));
+    --gradient-soft: linear-gradient(180deg, hsl(20 50% 97%), hsl(30 50% 94%));
+    --gradient-card: linear-gradient(145deg, hsl(20 40% 98%), hsl(30 45% 95%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(350 45% 55% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(350 40% 40% / 0.12);
+    --shadow-glow: 0 0 40px hsl(350 45% 55% / 0.2);
+  }
+
+  .dark {
+    --background: 350 25% 8%;
+    --foreground: 20 40% 95%;
+
+    --card: 350 20% 12%;
+    --card-foreground: 20 40% 95%;
+
+    --popover: 350 20% 12%;
+    --popover-foreground: 20 40% 95%;
+
+    --primary: 350 50% 65%;
+    --primary-foreground: 350 30% 10%;
+
+    --secondary: 350 15% 18%;
+    --secondary-foreground: 20 40% 95%;
+
+    --muted: 350 15% 18%;
+    --muted-foreground: 20 25% 65%;
+
+    --accent: 15 50% 60%;
+    --accent-foreground: 20 40% 95%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 350 15% 20%;
+    --input: 350 15% 20%;
+    --ring: 350 50% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
